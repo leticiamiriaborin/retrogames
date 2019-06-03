@@ -1,0 +1,31 @@
+#logo{ width:100%;
+			height:30%;
+			background-color:#039;
+			position:absolute;
+			top:0px;
+			left:0px;
+			
+}
+#menufundo{
+	 width:100%;
+		height:20%;
+		background-color:#0F3;
+		
+}
+#menu{ 
+		
+		width:80%;
+		height:100%;
+		background-color:#096;
+	
+}
+#conteudo{ width:100%;
+			height:50%;
+			background-color:#F33;
+}
+#rodape{width:100%;
+		height:30%;
+		background-color:#F0F;
+}
+
+
