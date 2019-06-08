@@ -4,9 +4,10 @@ body {
 }
 
 #carousel {
-	height: 200px;
-	width: 810px;
-	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	alignment-adjust:central;
 }
 
 .arrow {
@@ -38,8 +39,8 @@ body {
 }
 
 .level-2 {
-	height: 150px;
-	width: 110px;
+	height: 380px;
+	width:280px;
 	line-height: 150px;
 	background-color: #228291;
 	left: 650px;
@@ -47,8 +48,8 @@ body {
 }
 
 .level-1 {
-	height: 180px;
-	width: 130px;
+	height: 580px;
+	width: 380px;
 	line-height: 180px;
 	background-color: #6796E5;
 	left: 500px;
@@ -56,16 +57,16 @@ body {
 }
 
 .level0 {
-	height: 200px;
-	width: 150px;
+height: 800px;
+	width: 580px;
 	line-height: 200px;
 	background-color: #4EC9E1;
 	left: 330px;
 }
 
 .level1 {
-	height: 180px;
-	width: 130px;
+height:580px;
+	width: 380px;
 	line-height: 180px;
 	background-color: #6796E5;
 	margin-top: 10px;
@@ -73,8 +74,8 @@ body {
 }
 
 .level2 {
-	height: 150px;
-	width: 110px;
+height: 380px;
+	width: 280px;
 	line-height: 150px;
 	background-color: #228291;
 	margin-top: 25px;
