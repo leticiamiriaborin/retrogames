@@ -39,7 +39,7 @@ var Carousel = function (_React$Component) {
             }
             level = this.state.active - i;
             var obj = this.state.items[index];
-            items.push(React.createElement(Item, { key: index, id: index, className:obj.className, level: level }));
+            items.push(React.createElement(Item, { key: index, id: index, className:obj.className, level: level, href:obj.href, label: obj.label }));
         }
         return items;
     };
@@ -65,10 +65,12 @@ var Carousel = function (_React$Component) {
         return React.createElement(
             'div',
             { id: 'carousel', className: 'noselect' },
-            React.createElement(
-                'div',
-                { className: 'arrow arrow-left', onClick: this.leftClick },
-                React.createElement('i', { className: 'fi-arrow-left' })
+            React.createElement('div',{ style:{'display': 'flex','flex-direction': 'column','justify-content': 'center'} },
+                React.createElement(
+                    'div',
+                    { className: 'arrow arrow-left', onClick: this.leftClick },
+                    React.createElement('i', { className: 'fi-arrow-left' })
+                ),
             ),
             React.createElement(
                 ReactCSSTransitionGroup,
@@ -77,10 +79,12 @@ var Carousel = function (_React$Component) {
                 },
                 this.generateItems()
             ),
-            React.createElement(
-                'div',
-                { className: 'arrow arrow-right', onClick: this.rightClick },
-                React.createElement('i', { className: 'fi-arrow-right' })
+            React.createElement('div',{ style:{'display': 'flex','flex-direction': 'column','justify-content': 'center'} },
+                React.createElement(
+                    'div',
+                    { className: 'arrow arrow-right', onClick: this.rightClick },
+                    React.createElement('i', { className: 'fi-arrow-right' })
+                )
             )
         );
     };
@@ -106,9 +110,9 @@ var Item = function (_React$Component2) {
         console.log(this.props);
         var className = 'item level' + this.props.level + ' ' + this.props.className;
         return React.createElement(
-            'div',
-            { className: className },
-            this.props.label || ''
+            'a',
+            { className: className, href:this.props.href },
+            React.createElement('span', null, this.props.label || '')
         );
     };
 
@@ -116,15 +120,18 @@ var Item = function (_React$Component2) {
 }(React.Component);
 
 var items = [
-    { className:'sonic' }, 
-    { className:'mario' }, 
-    { className:'sonic' }, 
-    { className:'mario' }, 
-    { className:'sonic' }, 
-    { className:'mario' }, 
-    { className:'sonic' }, 
-    { className:'mario' }, 
-    { className:'sonic' }, 
-    { className:'mario' }
+    { label:'Pacman', className:'pacman', href:'pacman.html' }, 
+    { label:'Mario Bross 1', className:'mariobross1', href:'supermariobross.html' }, 
+    { label:'Mario Bross 3', className:'mariobross3', href:'supermariobross3.html' }, 
+    { label:'Megaman', className:'megaman', href:'megaman.html' }, 
+    { label:'Bomberman', className:'bomberman', href:'bomberman.html' }, 
+    { label:'Zelda', className:'zelda', href:'zelda.html' },
+    { label:'Castlevania 1', className:'castlevania1', href:'castlevania.html' },
+    { label:'Ducktales', className:'ducktales', href:'ducktales.html' },
+    { label:'Metroid', className:'metroid', href:'metroid.html' },
+    { label:'Tetris', className:'tetris', href:'tetris.html' },
+    { label:'Tiny Toon', className:'tinytoon', href:'tinytoon.html' },
+    { label:'Kirby', className:'kirby', href:'kirby.html' },
+   // { label:'1943 The Battle of Midway', className:'1943', href:'1943.html' },
 ];
 ReactDOM.render(React.createElement(Carousel, { items: items, active: 0 }), document.getElementById('app'));
