@@ -138,7 +138,38 @@ body {
 			align-items: center;
 			justify-content: center;
 		}
-		
+		div#Conteudo form legend,
+		div#Conteudo form label
+		{
+			color: #ffed00;
+			font-size: 30px;
+		}
+		div#Conteudo form{
+			width: 50%;
+		}
+		div#Conteudo form fieldset{
+			background: rgba(0,0,0,0.5);
+		}
+		div#Conteudo form label{
+			float: left;
+			width: 100%;
+			margin-bottom: 50px;
+		}
+		div#Conteudo form input,
+		div#Conteudo form textarea{
+			width: 100%;
+			height: 40px;
+			font-size: 20px; 
+		}
+
+		div#Conteudo form textarea {
+			height: 100px;
+		}
+		div#Conteudo form button{
+			height: 40px;
+			font-size: 20px; 
+		}
+
 		div#Conteudo div#carousel {
 			
 			display: grid;
